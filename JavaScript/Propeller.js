@@ -57,6 +57,13 @@ function suggestPropeller() {
 }
 
 function generateRandom() {
+
+    const shipSelect = document.getElementById('st-ship');
+    const options = shipSelect.options;
+    const randomIndex = Math.floor(Math.random() * options.length);
+    shipSelect.selectedIndex = randomIndex;
+
+
     document.getElementById("Cylinder").value = Math.floor(Math.random() * (20 - 2 + 1)) +2;
     document.getElementById("speed-ship").value = Math.floor(Math.random() * (30 - 10 + 1)) +10;
     document.getElementById("rpm-ship").value = Math.floor (Math.random() * (150 - 60 + 1)) +60;
