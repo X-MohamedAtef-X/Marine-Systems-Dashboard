@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propeller Ship Assistant</title>
+    <link rel="stylesheet" href="css/Propeller.css">
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">🚢 MarineSystem</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="PropellerAssisstant.html" class="active">Propeller Tool</a></li>
+                <li><a href="Engine.html">Engine Prediction</a></li>
+            </ul>
+        </div>
+    </nav>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Technical Specifications</h1>
+        
+        <div class="Field">
+            <label for="st-ship">Ship Type</label>
+            <select id="st-ship">
+                <option value="cargo">Cargo</option>
+                <option value="tanker">Tanker</option>
+                <option value="tanker">Bulk Carriers</option>
+                <option value="tanker">Container Ships</option>
+                <option value="tanker">LNG Carriers</option>
+                <option value="tanker">Ro-Ro</option>
+            </select>
+        </div>
+
+        <div class="Field">
+            <label for="Cylinder">Cylinder</label>
+            <input id="Cylinder" type="number" required oninput="if(this.value.length > 2) this.value = this.value.slice(0, 2);">
+        </div>
+
+        <div class="Field">
+            <label for="speed-ship">Speed (knots)</label>
+            <input id="speed-ship" type="number" required oninput="if(this.value.length > 2) this.value = this.value.slice(0, 2);">
+        </div>
+
+        <button class="btn" onclick="suggestPropeller()">Generate Propeller</button>
+        <button class="btn" onclick="generateRandom()">Test Random Numbers</button>
+
+        <hr style="margin: 30px 0; border: 0; border-top: 1px solid rgba(255,255,255,0.1);">
+
+        <div class="draw-section" id="visualizer-section">
+            <h2 style="margin-bottom: 20px; font-size: 26px;">Propeller Visualization</h2>
+            
+            <div id="propeller-3d-model" style="width: 100%; height: 350px; background: #0f172a; border-radius: 10px; overflow: hidden; border: 1px solid rgba(56, 189, 248, 0.3);">
+            </div>
+            
+            <div class="status-box" style="margin-top: 25px;">
+                <div class="item">
+                    <small style="color: #38bdf8; font-size: 14px;">Diameter</small>
+                    <p id="res-diameter" style="margin: 5px 0 0 0; font-weight: bold; font-size: 18px;">-- m</p>
+                </div>
+                <div class="item">
+                    <small style="color: #38bdf8; font-size: 14px;">Blade Count</small>
+                    <p id="res-blades" style="margin: 5px 0 0 0; font-weight: bold; font-size: 18px;">--</p>
+                </div>
+                <div class="item">
+                    <small style="color: #38bdf8; font-size: 14px;">Material</small>
+                    <p id="res-material" style="margin: 5px 0 0 0; font-weight: bold; font-size: 18px;">--</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="JavaScript/Propeller.js"></script>
+    <script src="JavaScript/Propeller3d.js"></script>
+
+</body>
+</html>

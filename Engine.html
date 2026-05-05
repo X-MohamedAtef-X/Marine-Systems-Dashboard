@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Engine.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Ship Engine Prediction</title>
+    <nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">🚢 MarineSystem</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="PropellerAssisstant.html" class="active">Propeller Tool</a></li>
+            <li><a href="Engine.html">Engine Prediction</a></li>
+
+        </ul>
+    </div>
+</nav>
+</head>
+<body>
+  
+<div class="container">
+    <h1>Engine Health Monitor</h1>
+
+    <div class="Field">
+        <label for="vibration">Vibrations</label>
+        <input id="vibration" type="number" placeholder="mm/s" required oninput="if(this.value.length > 5) this.value = this.value.slice(0, 5);">
+    </div>
+
+    <div class="Field">
+        <label for="temp">Temperature</label>
+        <input id="temp" type="number" placeholder="°C" required oninput="if(this.value.length > 4) this.value = this.value.slice(0, 4);">
+    </div>
+
+    <div class="Field">
+        <label for="load">Load</label>
+        <input id="load" type="number" placeholder="%" required oninput="if(this.value.length > 2) this.value = this.value.slice(0, 2);">
+    </div>
+
+    <div class="Field">
+        <label for="op">Oil Pressure</label>
+        <input id="op" type="number" placeholder="bar" required oninput="if(this.value.length > 1) this.value = this.value.slice(0, 1);">
+    </div>
+
+    <div class="Field">
+        <label for="speed">Speed</label>
+        <input id="speed" type="number" placeholder="km/h" required oninput="if(this.value.length > 4) this.value = this.value.slice(0, 4);">
+    </div>
+
+    <div class="Field">
+        <label for="dist">Distance</label>
+        <input id="dist" type="number" placeholder="km" required oninput="if(this.value.length > 4) this.value = this.value.slice(0, 4);">
+    </div>
+
+    <button class="btn" onclick="calculate()">Analyze Engine</button>
+    <button class="btn" onclick="generateRandomData()">Test Random Sensors</button>
+    
+    <hr style="margin: 20px 0; border: 0; border-top: 1px solid rgba(255,255,255,0.1);">
+
+    <h2>Engine Status</h2>
+    <div class="status-box" id="statusBox">
+        <div class="item" id="tempStatus">Temperature: --</div>
+        <div class="item" id="vibStatus">Vibration: --</div>
+        <div class="item" id="speedStatus">Speed: --</div>
+        <div class="item" id="timeStatus">Time: --</div>
+        <div class="item" id="reachStatus">Route: --</div>      
+        <div class="item" id="healthStatus">Health: --</div>
+        <div class="item" id="lifeStatus">Remaining Life: --</div>
+    </div> 
+</div>
+
+<script src="JavaScript/Script.js"></script>
+</body>
+</html>
