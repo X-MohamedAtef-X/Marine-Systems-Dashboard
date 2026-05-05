@@ -29,20 +29,28 @@
             <select id="st-ship">
                 <option value="cargo">Cargo</option>
                 <option value="tanker">Tanker</option>
-                <option value="tanker">Bulk Carriers</option>
-                <option value="tanker">Container Ships</option>
-                <option value="tanker">LNG Carriers</option>
-                <option value="tanker">Ro-Ro</option>
+                <option value="bulk">Bulk Carriers</option>
+                <option value="container">Container Ships</option>
+                <option value="lng">LNG Carriers</option>
+                <option value="roro">Ro-Ro</option>
             </select>
         </div>
 
+        <div class="Field">
+            <label for="engine-power">Engine Power (KW)</label>
+            <input id="engine-power" type="number" required oninput="if(this.value.length > 6) this.value = this.value.slice(0, 6);">
+        </div>
+        <div class="Field">
+            <label for="rpm-ship">RPM</label>
+            <input id="rpm-ship" type="number" required oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);">
+        </div>
         <div class="Field">
             <label for="Cylinder">Cylinder</label>
             <input id="Cylinder" type="number" required oninput="if(this.value.length > 2) this.value = this.value.slice(0, 2);">
         </div>
 
         <div class="Field">
-            <label for="speed-ship">Speed (knots)</label>
+            <label for="speed-ship">Ship Speed (knots)</label>
             <input id="speed-ship" type="number" required oninput="if(this.value.length > 2) this.value = this.value.slice(0, 2);">
         </div>
 
