@@ -7,7 +7,7 @@ function suggestPropeller() {
         return;
     }
 
-    if(cylinders <= 0 || speed <= 5)
+    if(cylinders <= 0 || speed <= 0)
     {
         alert("Error Value")
         return;
