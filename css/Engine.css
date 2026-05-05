@@ -72,7 +72,7 @@ body {
 
 .item {
     text-align: center;
-    width: 32%;
+    width: 92%;
     flex: 1 1 40%;
     padding: 10px;
     border-radius: 10px;
@@ -218,13 +218,14 @@ input::-webkit-outer-spin-button {
 
   
     .status-box {
-        flex-direction: column;
-        gap: 15px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+}
 
-    .item {
-        width:1 1 100%;
-    }
 }
 
 @media (max-width: 480px) {
