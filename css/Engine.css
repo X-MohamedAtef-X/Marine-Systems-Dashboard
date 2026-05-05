@@ -113,9 +113,9 @@ label {
     font-size: 25px;
 }
 
-input {
+input, select {
     flex: 1;
-    padding: 6px;
+    padding: 10px;
     border-radius: 6px;
     border: none;
     outline: none;
@@ -153,6 +153,15 @@ input::-webkit-outer-spin-button {
     background: #00a884;
 }
 
+.image-line {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
 
 @media (max-width: 768px) {
     .navbar{
@@ -188,14 +197,9 @@ input::-webkit-outer-spin-button {
         text-align: center;
     }
 
-    input {
+    input , .selects, .btn {
+        width: 92%;
         font-size: 18px !important;
-        width: 100%;
-    }
-
-    .btn {
-        font-size: 18px !important;
-        padding: 15px;
     }
 
   
@@ -219,7 +223,7 @@ input::-webkit-outer-spin-button {
     }
 
     .item {
-        width: 100%;
+        width:1 1 100%;
     }
 }
 

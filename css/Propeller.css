@@ -143,6 +143,15 @@ input::-webkit-outer-spin-button {
     font-size: 20px;
 }
 
+.image-line {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
 @media (max-width: 768px) {
     .navbar { margin-bottom: 30px; }
     
@@ -167,6 +176,7 @@ input::-webkit-outer-spin-button {
 
     .Field {
         flex-direction: column;
+        align-items: center;
         gap: 5px;
     }
 
