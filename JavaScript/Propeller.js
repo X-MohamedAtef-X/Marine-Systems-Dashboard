@@ -18,20 +18,33 @@ function suggestPropeller() {
 
     let cFactor;
     switch(type){
-        case 'cargo':
-            cFactor = 1.10;
-            break;
-        case 'tanker':
-        case 'bulk':
-            cFactor = 1.15;
-            break;
+    case 'cargo':
+        cFactor = 1.12;
+        break;
 
-        case 'container':
-            cFactor = 1.05;
-            break;
-        default:
-            cFactor = 1.10;
-    }
+    case 'tanker':
+        cFactor = 1.18;
+        break;
+
+    case 'bulk':
+        cFactor = 1.16;
+        break;
+
+    case 'container':
+        cFactor = 1.05;
+        break;
+
+    case 'lng':
+        cFactor = 1.10;
+        break;
+
+    case 'roro':
+        cFactor = 1.08;
+        break;
+
+    default:
+        cFactor = 1.12;
+}
     
     let bladeCount = 0;
 
@@ -44,7 +57,7 @@ function suggestPropeller() {
     } else {
         bladeCount = (speed > 15) ? 6 : 4;
     }
-    if (speed > 22) {
+    if (speed > 18) {
         material = "Ni-Al Bronze";
     } else {
         material = "Manganese Bronze";
@@ -52,6 +65,7 @@ function suggestPropeller() {
     document.getElementById('res-diameter').innerText = diameter + " m";
     document.getElementById('res-blades').innerText = bladeCount;
     document.getElementById('res-material').innerText = material;
+
     
     init3DModel(bladeCount); 
 }

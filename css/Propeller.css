@@ -54,7 +54,7 @@ body {
     transition: 0.3s;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover {
     color: #38bdf8;
 }
 
@@ -151,6 +151,7 @@ input::-webkit-outer-spin-button {
     margin-right: 10px;
     vertical-align: middle;
 }
+
 
 @media (max-width: 768px) {
     .navbar { margin-bottom: 30px; }

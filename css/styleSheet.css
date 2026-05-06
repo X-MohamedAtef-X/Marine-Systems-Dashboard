@@ -63,7 +63,7 @@ body {
     background: #1b263b;
     padding: 40px;
     border-radius: 20px;
-    width: 750px; /* توحيد الأبعاد */
+    width: 50%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -114,6 +114,7 @@ h1 {
     filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.3));
 }
 
+
 .menu-card h3 {
     margin: 10px 0;
     color: #38bdf8;
@@ -159,10 +160,12 @@ h1 {
         gap: 10px;
         padding: 10px;
         margin-top: 0;
+        margin-bottom: 10px;
     }
 
     .nav-links {
     gap: 15px;
+    
     }
     .nav-links a{
         font-size: 14px;
