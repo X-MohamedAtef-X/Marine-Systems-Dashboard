@@ -19,11 +19,11 @@ function suggestPropeller() {
     let cFactor;
     switch(type){
     case 'cargo':
-        cFactor = 1.12;
+        cFactor = 1.13;
         break;
 
     case 'tanker':
-        cFactor = 1.18;
+        cFactor = 1.11;
         break;
 
     case 'bulk':
@@ -39,18 +39,19 @@ function suggestPropeller() {
         break;
 
     case 'roro':
-        cFactor = 1.08;
+        cFactor = 1.12;
         break;
 
     default:
         cFactor = 1.12;
 }
     
+    let N = rpm / 60
     let bladeCount = 0;
 
-    let rawDiameter = cFactor * Math.pow((power / Math.pow(rpm, 3)), 0.2) * 20;
+    let rawDiameter = cFactor * Math.pow((power / Math.pow(N, 3)), 0.2);
 
-    let diameter = rawDiameter.toFixed(2);   
+    let diameter = rawDiameter.toFixed(2);
 
     if (cylinders % 2 === 0) {
         bladeCount = (speed > 15) ? 5 : 3; 
